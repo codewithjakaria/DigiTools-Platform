@@ -296,55 +296,59 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-3">Premium Digital Tools</h2>
-          <p className="text-gray-500 mb-10 text-sm">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3">
+            Premium Digital Tools
+          </h2>
+          <p className="text-gray-500 mb-10 text-xs md:text-sm">
             Choose from our curated collection of premium products.
           </p>
 
           <div className="inline-flex bg-[#F8F9FB] p-1 rounded-full mb-12 border border-gray-100">
             <button
               onClick={() => setActiveTab('products')}
-              className={`px-8 py-2.5 rounded-full text-[11px] font-bold transition-all ${activeTab === 'products' ? `${bgGradient} text-white shadow-md` : 'text-gray-500'}`}
+              className={`px-6 md:px-8 py-2 md:py-2.5 rounded-full text-[10px] md:text-[11px] font-bold transition-all ${activeTab === 'products' ? `${bgGradient} text-white shadow-md` : 'text-gray-500'}`}
             >
               Products
             </button>
             <button
               onClick={() => setActiveTab('cart')}
-              className={`px-8 py-2.5 rounded-full text-[11px] font-bold transition-all ${activeTab === 'cart' ? `${bgGradient} text-white shadow-md` : 'text-gray-500'}`}
+              className={`px-6 md:px-8 py-2 md:py-2.5 rounded-full text-[10px] md:text-[11px] font-bold transition-all ${activeTab === 'cart' ? `${bgGradient} text-white shadow-md` : 'text-gray-500'}`}
             >
               Cart ({cart.length})
             </button>
           </div>
 
           {activeTab === 'products' ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left">
               {products.map(product => (
                 <div
                   key={product.id}
-                  className="group bg-white border border-gray-100 rounded-[28px] p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col relative overflow-hidden"
+                  className="group bg-white border border-gray-100 rounded-[24px] md:rounded-[28px] p-6 md:p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col relative overflow-hidden"
                 >
-                  <div className="absolute top-5 right-7">
+                  <div className="absolute top-5 right-6 md:right-7">
                     <span className="text-[9px] font-bold uppercase px-2.5 py-1 rounded-full border bg-orange-50 text-orange-500 border-orange-100">
                       {product.tag}
                     </span>
                   </div>
-                  <div className="w-12 h-12 bg-[#F3F0FF] rounded-xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 bg-[#F3F0FF] rounded-xl flex items-center justify-center mb-5">
                     <img
                       src={product.icon}
                       className="w-6 h-6 object-contain"
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-gray-500 text-[13px] mb-5 leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold mb-2">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-500 text-xs md:text-[13px] mb-5 leading-relaxed">
                     {product.description}
                   </p>
                   <div className="space-y-2.5 mb-7 pt-4 border-t border-gray-50">
                     {product.features.map((f, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2 text-[11px] text-gray-600 font-medium"
+                        className="flex items-center gap-2 text-[10px] md:text-[11px] text-gray-600 font-medium"
                       >
                         <Check
                           size={12}
@@ -355,8 +359,8 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-baseline gap-1 mb-5">
-                    <span className="text-2xl font-extrabold">
+                  <div className="flex items-baseline gap-1 mb-5 mt-auto">
+                    <span className="text-xl md:text-2xl font-extrabold">
                       ${product.price}
                     </span>
                     <span className="text-gray-400 text-xs">
@@ -365,7 +369,7 @@ function App() {
                   </div>
                   <button
                     onClick={() => addToCart(product)}
-                    className={`w-full py-3.5 ${bgGradient} text-white rounded-full font-bold text-[13px] shadow-lg hover:opacity-90 transition`}
+                    className={`w-full py-3.5 ${bgGradient} text-white rounded-full font-bold text-[12px] md:text-[13px] shadow-lg`}
                   >
                     Buy Now
                   </button>
@@ -373,8 +377,8 @@ function App() {
               ))}
             </div>
           ) : (
-            <div className="max-w-2xl mx-auto bg-white border border-gray-100 rounded-[28px] p-8 shadow-xl text-left">
-              <h3 className="text-xl font-bold mb-6 border-b pb-4">
+            <div className="max-w-2xl mx-auto bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-xl text-left">
+              <h3 className="text-lg md:text-xl font-bold mb-6 border-b pb-4">
                 Your Cart
               </h3>
               {cart.length === 0 ? (
@@ -388,12 +392,14 @@ function App() {
                       key={index}
                       className="flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-gray-100"
                     >
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3 md:gap-4">
                         <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
                           <img src={item.icon} className="w-5 h-5" />
                         </div>
                         <div>
-                          <p className="font-bold text-md">{item.name}</p>
+                          <p className="font-bold text-sm md:text-md">
+                            {item.name}
+                          </p>
                           <p className="text-xs text-[#4F39F6] font-bold">
                             ${item.price}
                           </p>
@@ -408,16 +414,16 @@ function App() {
                     </div>
                   ))}
                   <div className="flex justify-between items-center pt-6 border-t mt-6">
-                    <span className="text-lg font-bold text-gray-500">
+                    <span className="text-md md:text-lg font-bold text-gray-500">
                       Total:
                     </span>
-                    <span className="text-3xl font-extrabold">
+                    <span className="text-2xl md:text-3xl font-extrabold">
                       ${totalPrice}
                     </span>
                   </div>
                   <button
                     onClick={handleCheckout}
-                    className={`w-full py-4 mt-6 ${bgGradient} text-white rounded-full font-bold text-md shadow-xl`}
+                    className={`w-full py-4 mt-6 ${bgGradient} text-white rounded-full font-bold text-sm md:text-md shadow-xl`}
                   >
                     Proceed to Payment
                   </button>
