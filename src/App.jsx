@@ -153,25 +153,26 @@ function App() {
     <div className="font-sans min-h-screen bg-white text-[#1A1A1A]">
       <ToastContainer />
 
-    
       <header className="bg-white sticky top-0 z-50 border-b border-gray-50">
-        <nav className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <h2 className="text-2xl font-bold text-[#4F39F6]">DigiTools</h2>
+        <nav className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
+          <h2 className="text-xl md:text-2xl font-bold text-[#4F39F6]">
+            DigiTools
+          </h2>
+
+          {/* Desktop Menu */}
           <ul
-            className={`md:flex md:static absolute top-full left-0 w-full md:w-auto bg-white transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-80 py-6 border-b' : 'max-h-0 md:max-h-screen'} md:space-x-8 text-[13px] font-medium text-gray-600`}
+            className={`md:flex items-center hidden md:space-x-8 text-[13px] font-medium text-gray-600`}
           >
             {['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'].map(
               item => (
-                <li
-                  key={item}
-                  className="hover:text-[#4F39F6] cursor-pointer px-8 md:px-0 py-2 md:py-0"
-                >
+                <li key={item} className="hover:text-[#4F39F6] cursor-pointer">
                   {item}
                 </li>
               ),
             )}
           </ul>
-          <div className="flex items-center space-x-6">
+
+          <div className="flex items-center space-x-4 md:space-x-6">
             <div
               className="relative cursor-pointer"
               onClick={() => setActiveTab('cart')}
@@ -181,27 +182,53 @@ function App() {
                 className="text-gray-700 hover:text-[#4F39F6]"
               />
               {cart.length > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#4F39F6] text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full animate-bounce">
+                <span className="absolute -top-2 -right-2 bg-[#4F39F6] text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                   {cart.length}
                 </span>
               )}
             </div>
             <button
-              className={`px-5 py-2 ${bgGradient} text-white rounded-full font-bold text-[13px] hidden md:block`}
+              className={`px-4 md:px-5 py-2 ${bgGradient} text-white rounded-full font-bold text-[12px] md:text-[13px] hidden sm:block`}
             >
               Get Started
             </button>
+
+            {/* Mobile Menu Toggle */}
             <button
-              className="md:hidden"
+              className="md:hidden text-gray-700"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
+
+        {/* Mobile Sidebar/Menu Dropdown */}
+        <div
+          className={`md:hidden absolute top-full left-0 w-full bg-white border-b transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0'}`}
+        >
+          <ul className="flex flex-col space-y-4 px-6 text-sm font-medium text-gray-600">
+            {['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'].map(
+              item => (
+                <li
+                  key={item}
+                  className="hover:text-[#4F39F6] cursor-pointer py-2 border-b border-gray-50 last:border-0"
+                >
+                  {item}
+                </li>
+              ),
+            )}
+            <li className="pt-2">
+              <button
+                className={`w-full py-3 ${bgGradient} text-white rounded-xl font-bold`}
+              >
+                Get Started
+              </button>
+            </li>
+          </ul>
+        </div>
       </header>
 
-      
       <section className="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <div className="inline-flex items-center gap-2 bg-[#F3F0FF] text-[#6344F5] px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide">
@@ -234,7 +261,6 @@ function App() {
         </div>
       </section>
 
-     
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-3">Premium Digital Tools</h2>
@@ -367,7 +393,6 @@ function App() {
         </div>
       </section>
 
-     
       <section className="py-20 bg-[#F9FAFC]">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-3">Get Started In 3 Steps</h2>
@@ -524,7 +549,6 @@ function App() {
         </div>
       </section>
 
-     
       <section className={`${bgGradient} py-20 px-6 text-center text-white`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">
