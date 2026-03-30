@@ -229,35 +229,70 @@ function App() {
         </div>
       </header>
 
-      <section className="py-16 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 bg-[#F3F0FF] text-[#6344F5] px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide">
+      <section className="py-12 md:py-20 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="text-center md:text-left order-2 md:order-1">
+          <div className="inline-flex items-center gap-2 bg-[#F3F0FF] text-[#6344F5] px-3 py-1 rounded-full text-[10px] md:text-[11px] font-bold uppercase tracking-wide">
             <span className="w-1.5 h-1.5 bg-[#6344F5] rounded-full animate-pulse"></span>{' '}
             New: AI Tools Available
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-6 leading-[1.15]">
-            Supercharge Your <br /> Digital Workflow
+          <h1 className="text-3xl md:text-5xl font-extrabold mt-6 leading-[1.2] md:leading-[1.15]">
+            Supercharge Your <br className="hidden md:block" /> Digital Workflow
           </h1>
-          <p className="mt-5 text-gray-500 text-base max-w-md">
-            Access premium assets and software—all in one place.
+          <p className="mt-5 text-gray-500 text-sm md:text-base max-w-md mx-auto md:mx-0">
+            Access premium assets and software—all in one place. Start creating
+            faster today.
           </p>
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <button
               className={`px-7 py-3.5 ${bgGradient} text-white rounded-full font-bold text-sm shadow-lg`}
             >
               Explore Products
             </button>
-            <button className="px-7 py-3.5 border-2 border-[#6344F5] text-[#6344F5] rounded-full font-bold text-sm flex items-center gap-2 hover:bg-[#F3F0FF] transition">
+            <button className="px-7 py-3.5 border-2 border-[#6344F5] text-[#6344F5] rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-[#F3F0FF] transition">
               <Play size={18} fill="currentColor" /> Watch Demo
             </button>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative order-1 md:order-2">
           <img
             src={bannerImg}
             alt="banner"
             className="w-full h-auto drop-shadow-2xl rounded-2xl"
           />
+        </div>
+      </section>
+
+      {/* ==========================================
+          5. Stats Section (Responsive)
+      ========================================== */}
+      <section className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] py-10 md:py-14">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 items-center text-white gap-8 md:gap-0">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-1">50K+</h2>
+              <p className="text-purple-100 text-xs md:text-sm font-medium opacity-80 uppercase tracking-wider">
+                Active Users
+              </p>
+            </div>
+            <div className="hidden md:flex justify-center">
+              <div className="w-[1px] h-14 bg-white/20"></div>
+            </div>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-1">200+</h2>
+              <p className="text-purple-100 text-xs md:text-sm font-medium opacity-80 uppercase tracking-wider">
+                Premium Tools
+              </p>
+            </div>
+            <div className="hidden md:flex justify-center">
+              <div className="w-[1px] h-14 bg-white/20"></div>
+            </div>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold mb-1">4.9</h2>
+              <p className="text-purple-100 text-xs md:text-sm font-medium opacity-80 uppercase tracking-wider">
+                Rating
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
