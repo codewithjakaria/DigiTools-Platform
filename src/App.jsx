@@ -549,7 +549,6 @@ function App() {
               </button>
             </div>
 
-            {/* Enterprise Card */}
             <div className="p-8 md:p-10 rounded-[20px] border border-[#E5E7EB] bg-white flex flex-col hover:shadow-lg transition-all sm:col-span-2 lg:col-span-1 max-w-sm sm:max-w-none mx-auto lg:mx-0 w-full">
               <h3 className="text-lg md:text-xl font-bold text-[#101727] mb-2 text-left">
                 Enterprise
@@ -589,30 +588,41 @@ function App() {
       </section>
 
       <section
-        className={`${bgGradient} py-16 md:py-24 px-6 text-center text-white overflow-hidden`}
+        className={`${bgGradient} py-12 md:py-24 px-4 md:px-6 text-center text-white relative overflow-hidden`}
       >
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
+        <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-[1.2] md:leading-tight">
-            Ready To Transform Your <br className="hidden md:block" /> Workflow?
+          <h2 className="text-[26px] md:text-4xl lg:text-5xl font-extrabold mb-4 md:mb-6 leading-[1.25] md:leading-tight px-2">
+            Ready To Transform Your <br className="hidden sm:block" /> Workflow?
           </h2>
 
-          <p className="text-purple-100 mb-10 text-sm md:text-lg opacity-90 max-w-2xl mx-auto">
+          <p className="text-purple-100 mb-8 md:mb-10 text-[15px] md:text-lg opacity-95 max-w-2xl mx-auto px-4 leading-relaxed">
             Join thousands of professionals working smarter with DigiTools.
             Start your free trial today.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="w-full sm:w-auto px-10 py-4 bg-white text-[#4F39F6] rounded-full font-bold text-sm shadow-xl transition-all hover:scale-105 active:scale-95">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-5">
+            <button className="w-full sm:w-auto max-w-[280px] sm:max-w-none px-8 md:px-10 py-3.5 md:py-4 bg-white text-[#4F39F6] rounded-full font-bold text-sm md:text-base shadow-xl transition-all hover:bg-gray-50 active:scale-95">
               Explore Products
             </button>
-            <button className="w-full sm:w-auto px-10 py-4 border-2 border-white/30 text-white rounded-full font-bold text-sm hover:bg-white/10 transition-all active:scale-95">
+            <button className="w-full sm:w-auto max-w-[280px] sm:max-w-none px-8 md:px-10 py-3.5 md:py-4 border-2 border-white/40 text-white rounded-full font-bold text-sm md:text-base hover:bg-white/10 transition-all active:scale-95">
               View Pricing
             </button>
           </div>
 
-          <p className="mt-6 text-[10px] md:text-xs text-purple-200 opacity-70">
-            14-day free trial • No credit card required • Cancel anytime
-          </p>
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-[10px] md:text-xs text-purple-200 font-medium">
+            <span className="flex items-center gap-1.5">
+              <Check size={12} className="text-white" /> 14-day free trial
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Check size={12} className="text-white" /> No credit card
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Check size={12} className="text-white" /> Cancel anytime
+            </span>
+          </div>
         </div>
       </section>
 
