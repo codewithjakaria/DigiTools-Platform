@@ -466,26 +466,27 @@ function App() {
         </div>
       </section>
 
-      <section className="py-[120px] bg-white">
-        <div className="max-w-[1600px] mx-auto px-[200px] text-center">
-          <h2 className="text-[48px] font-bold text-[#101727] mb-4 leading-tight">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#101727] mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-[#627382] mb-[60px] text-[16px]">
+          <p className="text-[#627382] mb-12 md:mb-16 text-sm md:text-base">
             Choose the plan that fits your needs. Upgrade or downgrade anytime.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {/* Starter Card */}
-            <div className="p-10 rounded-[20px] border border-[#E5E7EB] bg-white flex flex-col transition-all hover:shadow-lg">
-              <h3 className="text-[20px] font-bold text-[#101727] mb-2 text-left">
+            <div className="p-8 md:p-10 rounded-[20px] border border-[#E5E7EB] bg-white flex flex-col hover:shadow-lg transition-all">
+              <h3 className="text-lg md:text-xl font-bold text-[#101727] mb-2 text-left">
                 Starter
               </h3>
-              <p className="text-[#627382] text-[14px] mb-8 text-left">
+              <p className="text-[#627382] text-xs md:text-sm mb-6 text-left">
                 Perfect for getting started
               </p>
-              <div className="text-[48px] font-bold text-[#101727] mb-8 text-left flex items-baseline">
+              <div className="text-3xl md:text-4xl font-bold text-[#101727] mb-8 text-left">
                 $0
-                <span className="text-[16px] font-medium text-[#627382] ml-1">
+                <span className="text-sm font-medium text-[#627382] ml-1">
                   /Month
                 </span>
               </div>
@@ -498,33 +499,31 @@ function App() {
                 ].map((f, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 text-[14px] text-[#627382]"
+                    className="flex items-center gap-3 text-xs md:text-sm text-[#627382]"
                   >
-                    <Check
-                      size={18}
-                      className="text-[#10B981]"
-                      strokeWidth={3}
-                    />{' '}
-                    {f}
+                    <Check size={16} className="text-[#10B981]" /> {f}
                   </div>
                 ))}
               </div>
-              <button className="w-full py-4 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-[12px] font-bold text-[16px] transition-all hover:opacity-90 shadow-md">
+              <button className="w-full py-3.5 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-[12px] font-bold text-sm">
                 Get Started Free
               </button>
             </div>
+
             {/* Pro Card */}
-            <div className="p-10 rounded-[24px] bg-gradient-to-b from-[#4F39F6] to-[#9514FA] text-white shadow-2xl relative flex flex-col transform md:-translate-y-4 border-none transition-all">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FFD700] text-[#101727] text-[12px] font-bold px-4 py-1 rounded-full uppercase">
+            <div className="p-8 md:p-10 rounded-[24px] bg-gradient-to-b from-[#4F39F6] to-[#9514FA] text-white shadow-2xl relative flex flex-col border-none lg:-translate-y-4">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FFD700] text-[#101727] text-[10px] font-bold px-4 py-1 rounded-full uppercase">
                 Most Popular
               </div>
-              <h3 className="text-[20px] font-bold mb-2 text-left">Pro</h3>
-              <p className="text-white/80 text-[14px] mb-8 text-left">
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-left">
+                Pro
+              </h3>
+              <p className="text-white/80 text-xs md:text-sm mb-6 text-left">
                 Best for professionals
               </p>
-              <div className="text-[48px] font-bold mb-8 text-left flex items-baseline">
+              <div className="text-3xl md:text-4xl font-bold mb-8 text-left">
                 $29
-                <span className="text-[16px] font-medium text-white/70 ml-1">
+                <span className="text-sm font-medium text-white/70 ml-1">
                   /Month
                 </span>
               </div>
@@ -537,27 +536,30 @@ function App() {
                   'Cloud sync',
                   'Advanced analytics',
                 ].map((f, i) => (
-                  <div key={i} className="flex items-center gap-3 text-[14px]">
-                    <Check size={18} className="text-white" strokeWidth={3} />{' '}
-                    {f}
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 text-xs md:text-sm"
+                  >
+                    <Check size={16} className="text-white" /> {f}
                   </div>
                 ))}
               </div>
-              <button className="w-full py-4 bg-white text-[#4F39F6] rounded-[12px] font-bold text-[16px] hover:bg-gray-50 transition-all shadow-xl">
+              <button className="w-full py-3.5 bg-white text-[#4F39F6] rounded-[12px] font-bold text-sm shadow-xl">
                 Start Pro Trial
               </button>
             </div>
+
             {/* Enterprise Card */}
-            <div className="p-10 rounded-[20px] border border-[#E5E7EB] bg-white flex flex-col transition-all hover:shadow-lg">
-              <h3 className="text-[20px] font-bold text-[#101727] mb-2 text-left">
+            <div className="p-8 md:p-10 rounded-[20px] border border-[#E5E7EB] bg-white flex flex-col hover:shadow-lg transition-all sm:col-span-2 lg:col-span-1 max-w-sm sm:max-w-none mx-auto lg:mx-0 w-full">
+              <h3 className="text-lg md:text-xl font-bold text-[#101727] mb-2 text-left">
                 Enterprise
               </h3>
-              <p className="text-[#627382] text-[14px] mb-8 text-left">
+              <p className="text-[#627382] text-xs md:text-sm mb-6 text-left">
                 For teams and businesses
               </p>
-              <div className="text-[48px] font-bold text-[#101727] mb-8 text-left flex items-baseline">
+              <div className="text-3xl md:text-4xl font-bold text-[#101727] mb-8 text-left">
                 $99
-                <span className="text-[16px] font-medium text-[#627382] ml-1">
+                <span className="text-sm font-medium text-[#627382] ml-1">
                   /Month
                 </span>
               </div>
@@ -572,18 +574,13 @@ function App() {
                 ].map((f, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 text-[14px] text-[#627382]"
+                    className="flex items-center gap-3 text-xs md:text-sm text-[#627382]"
                   >
-                    <Check
-                      size={18}
-                      className="text-[#10B981]"
-                      strokeWidth={3}
-                    />{' '}
-                    {f}
+                    <Check size={16} className="text-[#10B981]" /> {f}
                   </div>
                 ))}
               </div>
-              <button className="w-full py-4 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-[12px] font-bold text-[16px] transition-all hover:opacity-90 shadow-md">
+              <button className="w-full py-3.5 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-[12px] font-bold text-sm">
                 Contact Sales
               </button>
             </div>
@@ -591,41 +588,47 @@ function App() {
         </div>
       </section>
 
-      <section className={`${bgGradient} py-20 px-6 text-center text-white`}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">
-            Ready To Transform Your Workflow?
+      <section
+        className={`${bgGradient} py-16 md:py-24 px-6 text-center text-white overflow-hidden`}
+      >
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-[1.2] md:leading-tight">
+            Ready To Transform Your <br className="hidden md:block" /> Workflow?
           </h2>
-          <p className="text-purple-100 mb-10 text-base opacity-90">
+
+          <p className="text-purple-100 mb-10 text-sm md:text-lg opacity-90 max-w-2xl mx-auto">
             Join thousands of professionals working smarter with DigiTools.
+            Start your free trial today.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-9 py-4 bg-white text-[#4F39F6] rounded-full font-bold text-sm shadow-xl transition-transform hover:scale-105">
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <button className="w-full sm:w-auto px-10 py-4 bg-white text-[#4F39F6] rounded-full font-bold text-sm shadow-xl transition-all hover:scale-105 active:scale-95">
               Explore Products
             </button>
-            <button className="px-9 py-4 border-2 border-white/30 text-white rounded-full font-bold text-sm hover:bg-white/10 transition">
+            <button className="w-full sm:w-auto px-10 py-4 border-2 border-white/30 text-white rounded-full font-bold text-sm hover:bg-white/10 transition-all active:scale-95">
               View Pricing
             </button>
           </div>
+
+          <p className="mt-6 text-[10px] md:text-xs text-purple-200 opacity-70">
+            14-day free trial • No credit card required • Cancel anytime
+          </p>
         </div>
       </section>
 
-      {/* ==========================================
-          9. Footer Section
-      ========================================== */}
-      <footer className="bg-[#0B0D17] pt-20 pb-10 text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 border-b border-gray-800 pb-16">
-          <div className="col-span-2 md:col-span-1">
-            <h2 className="text-2xl font-bold mb-6 text-[#4F39F6]">
+      <footer className="bg-[#0B0D17] pt-16 md:pt-20 pb-10 text-white">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 border-b border-gray-800 pb-16">
+          <div className="sm:col-span-2 md:col-span-1">
+            <h2 className="text-xl md:text-2xl font-bold mb-6 text-[#4F39F6]">
               DigiTools
             </h2>
-            <p className="text-gray-400 text-[13px] leading-relaxed">
+            <p className="text-gray-400 text-xs md:text-[13px] leading-relaxed max-w-xs">
               Premium tools for professionals. Building the future of digital
               workflows.
             </p>
           </div>
-          <div className="pl-0 md:pl-10">
-            <h4 className="font-bold mb-6 text-sm">Product</h4>
+          <div>
+            <h4 className="font-bold mb-5 md:mb-6 text-sm">Product</h4>
             <ul className="text-gray-400 text-[12px] space-y-3">
               <li>Features</li>
               <li>Pricing</li>
@@ -633,7 +636,7 @@ function App() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6 text-sm">Company</h4>
+            <h4 className="font-bold mb-5 md:mb-6 text-sm">Company</h4>
             <ul className="text-gray-400 text-[12px] space-y-3">
               <li>About</li>
               <li>Blog</li>
@@ -641,7 +644,7 @@ function App() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6 text-sm">Resources</h4>
+            <h4 className="font-bold mb-5 md:mb-6 text-sm">Resources</h4>
             <ul className="text-gray-400 text-[12px] space-y-3">
               <li>Help Center</li>
               <li>Privacy</li>
@@ -649,9 +652,9 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[11px] gap-6">
+        <div className="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] md:text-[11px] gap-6">
           <p>© 2026 Digitools. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex gap-6 md:gap-8">
             <span>Privacy Policy</span>
             <span>Terms of Service</span>
           </div>
