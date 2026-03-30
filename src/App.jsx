@@ -626,47 +626,79 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-[#0B0D17] pt-16 md:pt-20 pb-10 text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 border-b border-gray-800 pb-16">
-          <div className="sm:col-span-2 md:col-span-1">
-            <h2 className="text-xl md:text-2xl font-bold mb-6 text-[#4F39F6]">
-              DigiTools
-            </h2>
-            <p className="text-gray-400 text-xs md:text-[13px] leading-relaxed max-w-xs">
-              Premium tools for professionals. Building the future of digital
-              workflows.
+      <footer className="bg-[#0B0D17] pt-16 md:pt-24 pb-8 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8 border-b border-gray-800/60 pb-16">
+            <div className="col-span-2 lg:col-span-2">
+              <h2 className="text-2xl font-bold mb-5 text-[#4F39F6]">
+                DigiTools
+              </h2>
+              <p className="text-gray-400 text-[14px] leading-relaxed max-w-sm">
+                Premium tools for professionals. Building the future of digital
+                workflows with precision and speed.
+              </p>
+            </div>
+
+            <div className="col-span-1">
+              <h4 className="font-bold mb-6 text-[15px] text-white">Product</h4>
+              <ul className="text-gray-400 text-[13px] space-y-4">
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Features
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Pricing
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Templates
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-span-1">
+              <h4 className="font-bold mb-6 text-[15px] text-white">Company</h4>
+              <ul className="text-gray-400 text-[13px] space-y-4">
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  About
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Blog
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Careers
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-span-1 md:pt-0">
+              <h4 className="font-bold mb-6 text-[15px] text-white">
+                Resources
+              </h4>
+              <ul className="text-gray-400 text-[13px] space-y-4">
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Help Center
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Privacy
+                </li>
+                <li className="hover:text-[#4F39F6] cursor-pointer transition-colors">
+                  Terms
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-gray-500 text-[12px] text-center md:text-left order-2 md:order-1">
+              © 2026 Digitools. All rights reserved.
             </p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-5 md:mb-6 text-sm">Product</h4>
-            <ul className="text-gray-400 text-[12px] space-y-3">
-              <li>Features</li>
-              <li>Pricing</li>
-              <li>Templates</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-5 md:mb-6 text-sm">Company</h4>
-            <ul className="text-gray-400 text-[12px] space-y-3">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Careers</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-5 md:mb-6 text-sm">Resources</h4>
-            <ul className="text-gray-400 text-[12px] space-y-3">
-              <li>Help Center</li>
-              <li>Privacy</li>
-              <li>Terms</li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-[10px] md:text-[11px] gap-6">
-          <p>© 2026 Digitools. All rights reserved.</p>
-          <div className="flex gap-6 md:gap-8">
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
+            <div className="flex items-center gap-8 text-gray-500 text-[12px] order-1 md:order-2">
+              <span className="hover:text-white cursor-pointer transition-colors">
+                Privacy Policy
+              </span>
+              <span className="hover:text-white cursor-pointer transition-colors">
+                Terms of Service
+              </span>
+            </div>
           </div>
         </div>
       </footer>
