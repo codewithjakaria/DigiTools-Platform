@@ -434,26 +434,30 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#F9FAFC]">
+      <section className="py-16 md:py-24 bg-[#F9FAFC]">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-3">Get Started In 3 Steps</h2>
-          <p className="text-gray-500 mb-14 text-sm">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Get Started In 3 Steps
+          </h2>
+          <p className="text-gray-500 mb-12 md:mb-16 text-xs md:text-sm">
             Start using premium tools in minutes.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {steps.map(step => (
               <div
                 key={step.id}
-                className="bg-white p-10 rounded-[35px] shadow-sm relative flex flex-col items-center border border-gray-50 group hover:-translate-y-1 transition-all"
+                className="bg-white p-8 md:p-10 rounded-[30px] md:rounded-[35px] shadow-sm relative flex flex-col items-center border border-gray-50 group"
               >
-                <div className="absolute top-6 right-6 w-9 h-9 rounded-full bg-[#6344F5] flex items-center justify-center text-white text-[12px] font-bold">
+                <div className="absolute top-6 right-6 w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#6344F5] flex items-center justify-center text-white text-[10px] md:text-[12px] font-bold">
                   {step.id}
                 </div>
-                <div className="w-24 h-24 bg-[#F3F0FF] rounded-[30px] flex items-center justify-center mb-7 group-hover:scale-105 transition-transform">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-[#F3F0FF] rounded-[24px] md:rounded-[30px] flex items-center justify-center mb-6 md:mb-7 group-hover:scale-105 transition-transform">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                <p className="text-gray-500 text-[13px] leading-relaxed max-w-[220px]">
+                <h3 className="text-lg md:text-xl font-bold mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-gray-500 text-xs md:text-[13px] leading-relaxed max-w-[220px]">
                   {step.description}
                 </p>
               </div>
@@ -462,9 +466,6 @@ function App() {
         </div>
       </section>
 
-      {/* ==========================================
-          7. Pricing Section
-      ========================================== */}
       <section className="py-[120px] bg-white">
         <div className="max-w-[1600px] mx-auto px-[200px] text-center">
           <h2 className="text-[48px] font-bold text-[#101727] mb-4 leading-tight">
