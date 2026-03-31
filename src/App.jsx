@@ -113,9 +113,6 @@ const steps = [
 ];
 
 function App() {
-  // ==========================================
-  // 2. State & Logic Section
-  // ==========================================
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('products');
   const [cart, setCart] = useState([]);
@@ -159,7 +156,6 @@ function App() {
             DigiTools
           </h2>
 
-          {/* Desktop Menu */}
           <ul
             className={`md:flex items-center hidden md:space-x-8 text-[13px] font-medium text-gray-600`}
           >
@@ -187,13 +183,16 @@ function App() {
                 </span>
               )}
             </div>
+            <button className="hidden md:block text-sm font-bold text-gray-600 hover:text-[#4F39F6] transition-colors">
+              Login
+            </button>
+
             <button
               className={`px-4 md:px-5 py-2 ${bgGradient} text-white rounded-full font-bold text-[12px] md:text-[13px] hidden sm:block`}
             >
               Get Started
             </button>
 
-            {/* Mobile Menu Toggle */}
             <button
               className="md:hidden text-gray-700"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -203,7 +202,6 @@ function App() {
           </div>
         </nav>
 
-        {/* Mobile Sidebar/Menu Dropdown */}
         <div
           className={`md:hidden absolute top-full left-0 w-full bg-white border-b transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-screen opacity-100 py-6' : 'max-h-0 opacity-0'}`}
         >
@@ -226,6 +224,7 @@ function App() {
               </button>
             </li>
           </ul>
+          <button>Login</button>
         </div>
       </header>
 
@@ -262,9 +261,6 @@ function App() {
         </div>
       </section>
 
-      {/* ==========================================
-          5. Stats Section (Responsive)
-      ========================================== */}
       <section className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-5 items-center text-white gap-8 md:gap-0">
